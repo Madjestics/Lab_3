@@ -1,5 +1,5 @@
 import pytest
-import my_lib
+from src import lib
 
 
 # Тест функции, которая проверяет, что значения во входном списке упорядочены от мин к макс
@@ -27,8 +27,8 @@ class TestBubbleSort:
 
     # Тест функции на несортированном списке, проверка значений с сортированным
     def test_on_ordered(self, sorted_example, unsorted_example):
-        assert my_lib.bubble_sort(unsorted_example) == sorted_example
+        assert lib.bubble_sort(unsorted_example) == sorted_example
 
     # Тест функции с одинаковыми значениями в списке
     def test_on_equal(self, sorted_qeual_example, unsorted_qeual_example):
-        assert my_lib.bubble_sort(unsorted_qeual_example) == sorted_qeual_example
+        assert lib.bubble_sort(unsorted_qeual_example) == sorted_qeual_example

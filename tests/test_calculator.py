@@ -1,4 +1,4 @@
-import my_lib
+from src import lib
 import pytest
 
 
@@ -7,19 +7,19 @@ class TestCalculator:
 
     # Тестируем операцию сложения на коррктных данных. Функция возвращает списко элементов.
     def test_add_on_correct(self):
-        assert my_lib.calculator(51, 27, "+") == 78
+        assert lib.calculator(51, 27, "+") == 78
 
     # Тестируем операцию вычитания на коррктных данных. Функция возвращает списко элементов.
     def test_subtract_on_correct(self):
-        assert my_lib.calculator(25, 11, "-") == 14
+        assert lib.calculator(25, 11, "-") == 14
 
     # Тестируем операцию умножения на коррктных данных. Функция возвращает списко элементов.
     def test_multiply_on_correct(self):
-        assert my_lib.calculator(5, 6, "*") == 30
+        assert lib.calculator(5, 6, "*") == 30
 
     # Тестируем операцию деления на коррктных данных. Функция возвращает списко элементов.
     def test_divide_on_correct(self):
-        assert my_lib.calculator(5, 1, "/") == 5
+        assert lib.calculator(5, 1, "/") == 5
 
     # Тестируем программу на некоррктных данных. Функция вызывает исключение ZeroDivisionError.
     def test_dived_on_zero(self):
@@ -27,4 +27,4 @@ class TestCalculator:
         # Данная строчка показывает, что внутри блока кода под ней должно возникнуть заданное исключение
         # и это нормальное поведение.
         with pytest.raises(ZeroDivisionError):
-            my_lib.calculator(5, 0, "/")
+            lib.calculator(5, 0, "/")

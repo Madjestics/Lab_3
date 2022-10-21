@@ -1,4 +1,4 @@
-import my_lib
+from src import lib
 import pytest
 
 
@@ -7,9 +7,9 @@ class TestFibonacci:
 
     # Тестируем программу на коррктных данных. Функция возвращает списко элементов.
     def test_on_correct_n(self):
-        assert my_lib.fibonacci(7) == [1, 1, 2, 3, 5, 8, 13]
+        assert lib.fibonacci(7) == [1, 1, 2, 3, 5, 8, 13]
 
     # Тестируем программу на некоррктных данных. Функция возвращает пустой список [].
     def test_on_incorrect(self):
         # Когда мы подаем на вход программе число 0 или отрицательное - программа должна вернуть пустой список.
-        assert  my_lib.fibonacci(0) == []
+        assert lib.fibonacci(0) == []
